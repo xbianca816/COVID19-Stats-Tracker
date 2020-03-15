@@ -24,7 +24,7 @@ import copy
 
 
 # read in data
-path = '/Users/xb/Desktop/Corona'
+path = '/Users/xb/Desktop/Tracker'
 path_data = os.listdir(path)
 path_data = [x for x in path_data if 'data.xls' in x]
 print(path_data)
@@ -742,8 +742,8 @@ def update_figures(row_ids, selected_row_ids):
     
 
     fig = go.Figure(go.Scattermapbox(
-    lat=df_master['Lat'],
-    lon=df_master['Lng'],
+    lat=df_master['Latitude'],
+    lon=df_master['Longitude'],
     mode='markers',
     marker=go.scattermapbox.Marker(
         color=['#d7191c' if i < 1 else '#1a9622' for i in colorList],
